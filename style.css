@@ -1,0 +1,231 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*::selection {
+    background-color: transparent;
+}
+
+*::-moz-selection {
+    background: transparent;
+}
+ 
+* {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
+
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+:root{
+    font-family: Whitney, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    cursor:default;
+    --color-white: #fff;
+    --color-black: #000;
+    --color-dark-mode:#0a0a10;
+    --color-light-mode:#ece7e1;
+    --color-ddd-color: #ddd;
+    --color-gray: #c4c4c4;
+    --color-purple: #8000ff;
+    --color-light-purple: #cf59e6;
+    --color-light-blue: #6bc5f8;
+    --color-navbarBorder-dark:#20222e;
+}
+::-webkit-scrollbar{
+    width: 1px;
+}
+::-webkit-scrollbar-track {
+    background: #0a0a10;
+}
+::-webkit-scrollbar-thumb{
+   background-color: #000000;
+   /* border-radius: 20px; */
+
+}
+body{
+    background-color:#ece7e1;
+}
+
+
+.heading{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.heading h1{
+    font-size: 4rem;
+    background: -webkit-linear-gradient(135deg,var(--color-light-blue),var(--color-light-purple),var(--color-light-blue),var(--color-light-purple));
+    background: linear-gradient(-45deg,var(--color-light-blue),var(--color-light-purple),var(--color-light-blue),var(--color-light-purple));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400% 400%;
+    -webkit-animation: gradient 3s ease infinite;
+    animation: gradient 3s ease infinite;
+
+}
+@keyframes gradient {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    
+    100% {
+        background-position: 0 50%;
+    }
+}
+.main-content-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0px;
+}
+.all-faqs-container{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.faqs-question{
+    display: flex;
+    position: relative;
+     background-image: linear-gradient(to right, #6991c7 0%, #a3bded 100%);
+    color: white;
+    width: 100%;
+    height: 50px;
+    align-items: center;
+    padding:10px 20px;
+    cursor: pointer;
+}
+.faqs-question:hover{
+ background-image: linear-gradient(to right, #a3bded 0%, #a8c6ec 100%);
+}
+.faqs-question h3{
+    font-size: 2rem;
+    color: white;
+    font-weight: 400;
+}
+.faqs-question span{
+    font-size: 3rem;
+    font-weight: 800;
+}
+.open{
+    position: absolute;
+    right: 0px;
+    padding: 0px 20px;
+    transition: all .5s;
+    visibility: visible;
+}
+.openSign{
+    transform: scaleY(.01);
+  /* visibility: hidden; */
+  transition: all 100ms;
+}
+.close{
+    position: absolute;
+    right: 0px;
+    padding: 0px 20px;
+    visibility: hidden;
+    transition: all .5s;
+}
+.closeSign{
+    transition: all .5s;
+    visibility: visible;
+}
+.faqs-answer{
+    display: flex;
+    align-items: center;
+   background-color:#ddd;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: all .3s;
+    padding:0px 20px;
+}
+.faqs-answer p{
+    font-size: 2rem;
+    font-weight: 400;
+    color: black;
+}
+.faqs-answer.active{
+    display: flex;
+    /* height: fit-content; */
+    height:50px;
+    padding:25px 20px;
+    transition: all .3s;
+    margin-bottom: 15px;
+}
+
+
+
+
+
+/* responsive code below*/
+@media screen and (max-width:1920px) {
+    html {
+        font-size: 60%;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    html {
+        font-size: 60%;
+    }
+}
+
+@media screen and (max-width:998px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    html {
+        font-size: 50%;
+    }
+ 
+}
+
+@media screen and (max-width:500px) {
+    html {
+        font-size: 45%;  
+    }
+
+}
+
+@media screen and (max-width:430px) {
+    html {
+        font-size: 43%;
+    }
+}
+
+@media screen and (max-width:375px) {
+    html {
+        font-size: 40%;
+    }
+}
+@media screen and (max-width:300px) {
+    html {
+        font-size: 40%;
+    }
+}
+
+/* responsive code above */
+
